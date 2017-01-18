@@ -1,0 +1,78 @@
+<! -- 
+* myLupus - Erweiterte Anbindung der Lupusec XT2 Alarmanlage
+*
+* Author: @devius_lupus
+* Source: https://github.com/devius-lupus/mylupus
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Erweitere Anbindung der Lupusec XT2 Alarmanlage">
+      <meta name="author" content="@devius_lupus">
+      <title>myLupus</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/main.css" rel="stylesheet">
+      <script src='/js/socket.io.slim.min.js'></script>
+      <script src='/js/main.js'></script>
+   </head>
+   
+    <body>
+        
+   <div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">myLupus</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li>&nbsp;</li>
+            </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>&nbsp;</li>
+            <li class="active">&nbsp;</li>
+          </ul>  
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- 
+      <div class="jumbotron">
+        <p>...</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="tbd" role="button">TBD &raquo;</a>
+        </p>
+      </div>
+      -->
+    </div> <!-- /container -->        
+        
+      <div class="container">
+         <div class="page-header text-right">
+            <div id='time'>Warte auf synchronisation</div>
+         </div>
+         <ul id='messages' class='lead'></ul>
+      </div>
+        
+      <footer class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-8 margin-20">
+                   <p><small>Source on <a href="https://github.com/devius-lupus/mylupus">github</a> - V 0.0.1 </small></p>
+               </div>
+               <div class="col-sm-4 text-right">
+                   <p><small>contact: <a href="https://twitter.com/devius_lupus">@divius_lupus</a></small></p>
+               </div>
+            </div>
+         </div>
+      </footer>
+        
+   </body>
+</html>
