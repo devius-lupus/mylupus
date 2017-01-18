@@ -3,7 +3,7 @@ ist eine erweiterte Anbindung der Lupusec XT2 Alarmanlage
 
 Viel Spaß mit dem ersten Wurf. 
 
-Kontakt via twitter: [@devius_lupus](http://www.twitter.com/devius_lupus
+Kontakt via twitter: [@devius_lupus](http://www.twitter.com/devius_lupus)
 
 ## Warum mylupus
 Die XT2 von [Lupusec](http://www.lupus-electronics.de/) ist eine klasse Alarmanlage - sie unterstützt nur leider kein IPV6. Zudem würde ich niemals meine Alarmanlage im Internet freigeben. Via SMS bekomme ich die Alarmanlage nicht aus- oder eingeschaltet. Die Bestätigungsmails sind zwar nett, aber für mich nicht übersichtlich genug. 
