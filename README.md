@@ -1,3 +1,5 @@
+![Lupus_logo](public/img/lupus_logo.png "mylupus Logo")
+
 # mylupus
 ist eine erweiterte Anbindung der Lupusec XT2 Alarmanlage in Node.JS für den Raspberry Pi
 
@@ -49,15 +51,15 @@ Im produktivbetrieb lasse ich mylupus via [foreverjs](https://github.com/forever
   $  forever start server.js
 ```
 
-## Befehle
+## Kommandos
 Kommandos werden via Direktnachricht bei Twitter gesendet: 
 
-list - zeigt alle offenen Kontakte bzw. die Kontakte an, die einen Alarm ausgelöst haben. 
-status - zeigt eine Übersicht Area & Scharfschaltung, Batterie, Sendeleistung, GSM Signal, Stromverbrauch
-arm - scharf schalten
-disarm - unschaft schalten
+  * list - zeigt alle offenen Kontakte bzw. die Kontakte an, die einen Alarm ausgelöst haben. 
+  * status - zeigt eine Übersicht Area & Scharfschaltung, Batterie, Sendeleistung, GSM Signal, Stromverbrauch
+  * arm - scharf schalten
+  * disarm - unschaft schalten
 
-unter http://<ip vom raspberry>:3000/ werden alle Befehle als Log ausgegeben, die der Raspberry Pi umgesetzt hat. Vergangene Kommandos werden nicht angezeigt.
+unter http://ip_vom_raspberry:3000/ werden alle Befehle als Log ausgegeben, die der Raspberry Pi umgesetzt hat. Vergangene Kommandos werden nicht angezeigt.
 
 ## Quellen
 Das Thema Lupusec ansteuern wurde bereits mehrfach im Internet diskutiert. Anbei die Quellen, die mir geholfen haben: 
