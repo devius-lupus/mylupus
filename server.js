@@ -2,10 +2,10 @@
  * myLupus - Erweitere Anbindung der Lupusec XT2 Alarmanlage
  *
  * Author: @devius_lupus
- * Source: https://github.com/devius-lupus/mylupus
+ * Source: tbd
  *
  */
-  
+ 
 
 var express = require('express');
 var path = require('path');
@@ -13,20 +13,17 @@ var logger = require('morgan');
 var compression = require('compression');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
-var dotenv = require('dotenv');
+var config = require('./config');
 
-// Lade globale Variablen aus der .env Datei
-dotenv.load();
-
-var intro = "******************************************************\n\r*  myLupus v0.0.2 - Chirp Release                    *\n\r*  Kontakt via twitter\x1b[36m @devius_lupus \x1b[0m                *\n\r******************************************************\n\r"
+var intro = "******************************************************\n\r*  myLupus v0.0.2 - alpha Release                    *\n\r*  Kontakt via twitter\x1b[36m @devius_lupus \x1b[0m                *\n\r******************************************************\n\r"
 
 console.log(intro);
 
-if (!process.env.CONSUMER_KEY){
+if (!config.twitter.consumer_key){
     console.log(" IP der Alarmanlage nicht gesetzt\n\r")
     console.log(" .env Datei nicht korrekt konfiguriert\n\r")
     process.exit(0);
-}else if(!process.env.LUPUSEC_IP){
+}else if(!config.lupusec.ip){
     console.log(" Twitter Anmeldedaten sind nicht\n\r")
     console.log(" .env Datei nicht korrekt konfiguriert\n\r")
     process.exit(0);
@@ -49,20 +46,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.post('/contact', contactController.contactPost);
-
 // Route zur Homepage
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/public/index.html'));
 })
-
-// Production error handler
-if (app.get('env') === 'production') {
-  app.use(function(err, req, res, next) {
-    console.error(err.stack);
-    res.sendStatus(err.status || 500);
-  });
-}
 
 // Sende aktuelle Uhrzeit als "healtcheck" an das Frontend
 function sendTime() {

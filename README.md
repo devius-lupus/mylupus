@@ -20,26 +20,9 @@ Die XT2 von [Lupusec](http://www.lupus-electronics.de/) ist eine klasse Alarmanl
 ```
 info: Installationsanleitung für node.js unter raspbian findet ihr [hier](https://www.einplatinencomputer.com/raspberry-pi-node-js-installieren/)
 
-Im Projektpfad eine .env Datei erstellen und jeweils die <...> ersetzten mit den entsprechenden Werten. 
+Im Projektpfad muss die config.js Datei mit den entsprechenden Variabeln befüllt werden. Siehe Kommentare in der Datei.
 Man muss eine Twitter App erstellen unter https://apps.twitter.com/app/new, um die entsprechenden Zugangsdaten zu bekommen. 
 
-``` bash
-    # Konfiguration für die Zugriffe
-
-    CONSUMER_KEY='<twitter consumer key>'
-    CONSUMER_SECRET='<twitter consumer secret>'
-    ACCESS_TOKEN='<twitter access token>'
-    ACCESS_TOKEN_SECRET='<twitter access token secret>'
-    
-    TWITTER_USER='<twitter handle der Nachrichten schicken darf z.B. devius_lupus>'
-
-    LUPUSEC_USER='<lupusec benutzername - bitte nicht admin!>'
-    LUPUSEC_PW='<kennwort>'
-    LUPUSEC_IP='<ip der Alarmanlage im Netzwerk z.B. 192.168.0.34>'
-
-    # Port für web UI:
-    PORT=3000
-```
 Starten via 
 ``` bash
   $  npm start
